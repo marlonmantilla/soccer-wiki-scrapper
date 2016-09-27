@@ -16,7 +16,7 @@ app.get('/players', function (req, res) {
         if (!error) {
             var $ = cheerio.load(html);
 
-            var json = {name: "", dob: "", team: "", clubes: ""};
+            var json = {name: "", dob: "", team: "", clubes: "", avatar: ""};
 
             $('.infobox').filter(function () {
                 var data  = $(this);
@@ -40,6 +40,8 @@ app.get('/players', function (req, res) {
                     };
                 });
                 json.clubes = teams;
+
+                json.avatar = data.find('.image').find('img').attr('src');
 
             });
 
