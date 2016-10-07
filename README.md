@@ -3,7 +3,7 @@ Wikipedia Footballer player scrapper basic information.
 
 ## Node version
 
-`v6.2.0`
+`v4.5.0`
 
 ## Setup & Running
 
